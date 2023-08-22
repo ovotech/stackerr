@@ -1,0 +1,9 @@
+packages:
+  github.com/ovotech/stackerr:
+    config:
+      recursive: True
+      all: True
+      with-expecter: True
+      inpackage: True
+      testonly: True
+      disable-version-string: True

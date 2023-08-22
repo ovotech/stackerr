@@ -1,0 +1,45 @@
+linters:
+  enable-all: true
+  disable:
+    - deadcode # deprecated
+    - depguard
+    - exhaustruct
+    - exhaustivestruct # deprecated
+    - forcetypeassert
+    - golint # deprecated
+    - gomodguard
+    - gomoddirectives
+    - ifshort # deprecated
+    - interfacer # deprecated
+    - ireturn
+    - maligned # deprecated
+    - nosnakecase # deprecated
+    - rowserrcheck # disabled because of generics
+    - scopelint # deprecated
+    - structcheck # deprecated
+    - testableexamples # deprecated
+    - varcheck
+    - wastedassign # disabled because of generics
+
+linters-settings:
+  gomoddirectives:
+    replace-local: true
+
+  wrapcheck:
+    ignorePackageGlobs:
+      - github.com/ovotech/stackerr
+
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/ovotech)
+      - prefix(github.com/ovotech/go-sync)
+      - blank
+      - dot
+    skip-generated: true
+    custom-order: true
+
+  varnamelen:
+    ignore-names:
+      - ID
